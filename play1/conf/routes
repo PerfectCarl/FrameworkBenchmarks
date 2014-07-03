@@ -8,10 +8,10 @@ GET     /                               Application.index
 # Round 8
 GET     /json                           Application.json
 GET     /db                             Application.db
+GET     /queries						Application.queries
 GET     /updates                        Application.updates  
 GET     /fortunes                       Application.fortunes  
 GET     /plaintext						Application.plaintext
-GET     /queries						Application.queries
 
 # Extra
 GET     /setup                          Extra.setup
