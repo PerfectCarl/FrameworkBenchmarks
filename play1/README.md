@@ -32,22 +32,22 @@ Insert the data: http://localhost:8080/setup
 Launch
 ======
 
-Check in `conf/application.conf` the line: 
-`
-
-`
+Check in `conf/application.conf` that the following line is present: 
+```
+application.mode=prod
+```
 Precompile the application 
-`
+```
 play precompile
-`
+```
 Launch the application with the `-Dprecompiled=true` option via 
-`
+```
 play run -Dprecompiled=true
-`
+```
 or 
-`
+```
 play start -Dprecompiled=true
-`
+```
 
 Extra urls
 ==========
