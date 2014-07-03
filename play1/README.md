@@ -53,13 +53,12 @@ Extra urls
 ==========
 
 For convenience, the application include the following actions: 
-  - [index](): a help page that lists all the actions
-  - [populateDb](): create the test datasets in the DB
+  - [index](http://localhost:8080/): a help page that lists all the actions
 
 Output
 ======
 
-/json
+[/json](http://www.techempower.com/benchmarks/#section=json)
 -----
 ```
 < HTTP/1.1 200 OK
@@ -75,7 +74,7 @@ Output
 {"message":"Hello World!"}
 ```
 
-/db
+[/db](http://www.techempower.com/benchmarks/#section=db)
 ---
 ```
 < HTTP/1.1 200 OK
@@ -91,7 +90,7 @@ Output
 {"id":3833,"randomNumber":84}
 ```
 
-/queries?queries=10
+[/queries?queries=10](http://www.techempower.com/benchmarks/#section=query)
 -------------------
 ```
 < HTTP/1.1 200 OK
@@ -110,7 +109,7 @@ Output
 "id":4521,"randomNumber":6063},{"id":8173,"randomNumber":3690},{"id":3648,"randomNumber":8803}]
 ```
 
-/fortunes
+[/fortunes](http://www.techempower.com/benchmarks/#section=fortune)
 ---------
 ```
 < HTTP/1.1 200 OK
@@ -172,8 +171,7 @@ Output
                                 </tr>
 								...
 ```
-
-/updates?queries=10
+[/updates?queries=10](http://www.techempower.com/benchmarks/#section=update)
 -------------------
 ```
 < HTTP/1.1 200 OK
@@ -190,9 +188,9 @@ Output
 {"id":8118,"randomNumber":4023},{"id":7965,"randomNumber":1388},
 {"id":7797,"randomNumber":2249},{"id":112,"randomNumber":1108},{"id":6127,"randomNumber":4323},
 {"id":2597,"randomNumber":7509},{"id":2978,"randomNumber":7883},{"id":1111,"randomNumber":2228}]
-
 ```
-/plaintext
+
+[/plaintext](http://www.techempower.com/benchmarks/#section=plaintext)
 ----------
 ```
 < HTTP/1.1 200 OK
