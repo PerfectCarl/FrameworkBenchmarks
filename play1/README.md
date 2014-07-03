@@ -125,52 +125,33 @@ Output
 <
 <!DOCTYPE html>
 <html>
-        <head>
-                <title>Fortunes</title>
-        </head>
-        <body>
-                <table>
-                        <tr>
-                                <th>id</th>
-                                <th>message</th>
-                        </tr>
-                                <tr>
-                                        <td>13</td>
-                                        <td>009D30980AA408F62A12E0E7E7ACBD17</td>
-                                </tr>
-                                <tr>
-                                        <td>11</td>
-                                        <td>01E9ED065629C13CDD69B6115EBE39E9</td>
-                                </tr>
-                                <tr>
-                                        <td>84</td>
-                                        <td>01E9ED065629C13CDD69B6115EBE39E9</td>
-                                </tr>
-                                <tr>
-                                        <td>93</td>
-                                        <td>01E9ED065629C13CDD69B6115EBE39E9</td>
-                                </tr>
-                                <tr>
-                                        <td>95</td>
-                                        <td>01E9ED065629C13CDD69B6115EBE39E9</td>
-                                </tr>
-                                <tr>
-                                        <td>50</td>
-                                        <td>0764924EE9C3CFF6D74CD34F5D986D6B</td>
-                                </tr>
-                                <tr>
-                                        <td>5</td>
-                                        <td>08C3734568F63EF539C33E4474D6C085</td>
-                                </tr>
-                                <tr>
-                                        <td>27</td>
-                                        <td>08C3734568F63EF539C33E4474D6C085</td>
-                                </tr>
-                                <tr>
-                                        <td>98</td>
-                                        <td>08C3734568F63EF539C33E4474D6C085</td>
-                                </tr>
-								...
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Fortunes</title>
+	</head>
+	<body>
+		<table>
+			<tr>
+					<th>id</th>
+					<th>message</th>
+			</tr>
+			<tr>
+					<td>10</td>
+					<td>&lt;script&gt;alert(&quot;This should not be displayed in a browser alert box.&quot;);&lt;/script&gt;</td>
+			</tr>
+			<tr>
+					<td>3</td>
+					<td>A bad random number generator: 1, 1, 1, 1, 1, 4.33e+67, 1, 1, 1</td>
+			</tr>
+			<tr>
+					<td>4</td>
+					<td>A computer program does what you tell it to do, not what you want it to do.</td>
+			</tr>
+			<tr>
+					<td>1</td>
+					<td>A computer scientist is someone who fixes things that aren&apos;&apos;t broken.</td>
+			</tr>
+			...
 ```
 [/updates?queries=10](http://www.techempower.com/benchmarks/#section=update)
 -------------------
