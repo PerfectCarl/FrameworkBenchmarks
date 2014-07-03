@@ -18,4 +18,3 @@ GET     /setup                          Extra.setup
 GET     /setup_tx                       Extra.setupTx
 GET     /staticplaintext				staticFile:/public/html/plaintext.html
 GET     /dbAsync						Extra.dbAsyncEachQuery
-

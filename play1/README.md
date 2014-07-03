@@ -10,7 +10,8 @@ The application uses the [Rythm template engine](https://github.com/greenlaw110/
 Installation
 ============
 Install Mysql 5.6+
-Create the database 
+
+Create the database with the following (excerpt from [create.sql](https://github.com/TechEmpower/FrameworkBenchmarks/blob/master/config/create.sql))
 ```sql
 # create benchmark user
 GRANT ALL ON *.* TO 'benchmarkdbuser'@'%' IDENTIFIED BY 'benchmarkdbpass';

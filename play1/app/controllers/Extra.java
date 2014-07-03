@@ -23,7 +23,7 @@ public class Extra extends Controller {
 
     // FIXME: should this test be consistent - ie set seed or not?
     private static Random random = new Random();
-
+    private static int fortuneId;
 
     @play.db.jpa.NoTransaction
     public static void setupTx() {
@@ -49,9 +49,9 @@ public class Extra extends Controller {
         plugin.closeTx(false);
     }
 
-    final protected static char[] hexArray = "0123456789ABCDEF".toCharArray();
+    final private static char[] hexArray = "0123456789ABCDEF".toCharArray();
 
-    public static String bytesToHex(byte[] bytes) {
+    private static String bytesToHex(byte[] bytes) {
         char[] hexChars = new char[bytes.length * 2];
         int v;
         for (int j = 0; j < bytes.length; j++) {
@@ -77,7 +77,7 @@ public class Extra extends Controller {
     }
 
     // EXTRA
-    public static void setup() {
+    public static void setupFortuneHex() {
 
         // clean out the old
         World.deleteAll();
@@ -126,6 +126,55 @@ public class Extra extends Controller {
 
         }
         System.out.println("(setup) Fortunes created");
+    }
+
+    public static void setup() {
+
+        // clean out the old
+        World.deleteAll();
+        System.out.println("(setup) Worlds deleted");
+        // in with the new
+        for (long i = 0; i <= TEST_DATABASE_ROWS; i++) {
+            int randomNumber = random.nextInt(TEST_DATABASE_ROWS) + 1;
+            new World(i, randomNumber).save();
+            if (i % 100 == 0) {
+
+                World.em().flush();
+                World.em().clear();
+                System.out.println("(setup) Worlds added : " + i + "/"
+                        + TEST_DATABASE_ROWS);
+
+            }
+
+        }
+        System.out.println("(setup) Worlds created");
+
+        Fortune.deleteAll();
+        System.out.println("(setup) Fortunes deleted");
+        fortuneId = 0;
+        createFortune("fortune: No such file or directory");
+        createFortune("A computer scientist is someone who fixes things that aren't broken.");
+        createFortune("After enough decimal places, nobody gives a damn.");
+        createFortune("A bad random number generator: 1, 1, 1, 1, 1, 4.33e+67, 1, 1, 1");
+        createFortune("A computer program does what you tell it to do, not what you want it to do.");
+        createFortune("Emacs is a nice operating system, but I prefer UNIX. — Tom Christaensen");
+        createFortune("Any program that runs right is obsolete.");
+        createFortune("A list is only as strong as its weakest link. — Donald Knuth");
+        createFortune("Feature: A bug with seniority.");
+        createFortune("Computers make very fast, very accurate mistakes.");
+        createFortune("<script>alert(\"This should not be displayed in a browser alert box.\");</script>");
+        createFortune("フレームワークのベンチマーク");
+
+
+        System.out.println("(setup) Fortunes created");
+    }
+
+    private static void createFortune(String string) {
+        new Fortune(fortuneId, string).save();
+        fortuneId++;
+        Fortune.em().flush();
+        Fortune.em().clear();
+
     }
 
     /**
