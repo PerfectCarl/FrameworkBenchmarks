@@ -58,22 +58,135 @@ Output
 {"message":"Hello World!"}
 ```
 
-json
+/db
+---
 ```
-```
-json
-```
+< HTTP/1.1 200 OK
+< Server: Play! Framework;1.3.x-1.3.0RC1;dev
+< Content-Type: application/json; charset=utf-8
+< Date: Thu, 03 Jul 2014 10:14:51 GMT
+< Set-Cookie: PLAY_FLASH=; Expires=Thu, 03 Jul 2014 10:14:51 GMT; Path=/
+< Set-Cookie: PLAY_ERRORS=; Expires=Thu, 03 Jul 2014 10:14:51 GMT; Path=/
+< Set-Cookie: PLAY_SESSION=; Expires=Thu, 03 Jul 2014 10:14:51 GMT; Path=/
+< Cache-Control: no-cache
+< Content-Length: 29
+<
+{"id":3833,"randomNumber":84}
 ```
 
-json
+/queries?queries=10
+-------------------
 ```
+< HTTP/1.1 200 OK
+< Server: Play! Framework;1.3.x-1.3.0RC1;dev
+< Content-Type: application/json; charset=utf-8
+< Date: Thu, 03 Jul 2014 10:15:53 GMT
+< Set-Cookie: PLAY_FLASH=; Expires=Thu, 03 Jul 2014 10:15:53 GMT; Path=/
+< Set-Cookie: PLAY_ERRORS=; Expires=Thu, 03 Jul 2014 10:15:53 GMT; Path=/
+< Set-Cookie: PLAY_SESSION=; Expires=Thu, 03 Jul 2014 10:15:53 GMT; Path=/
+< Cache-Control: no-cache
+< Content-Length: 320
+<
+[{"id":6851,"randomNumber":7598},{"id":3968,"randomNumber":7325},
+{"id":8159,"randomNumber":348},{"id":9560,"randomNumber":7333},
+{"id":9938,"randomNumber":9080},{"id":1598,"randomNumber":1623},{"id":3280,"randomNumber":8707},
+"id":4521,"randomNumber":6063},{"id":8173,"randomNumber":3690},{"id":3648,"randomNumber":8803}]
 ```
-json
+
+/fortunes
+---------
 ```
+< HTTP/1.1 200 OK
+< Server: Play! Framework;1.3.x-1.3.0RC1;dev
+< Content-Type: text/html; charset=utf-8
+< Date: Thu, 03 Jul 2014 10:20:50 GMT
+< Set-Cookie: PLAY_FLASH=; Expires=Thu, 03 Jul 2014 10:20:50 GMT; Path=/
+< Set-Cookie: PLAY_ERRORS=; Expires=Thu, 03 Jul 2014 10:20:50 GMT; Path=/
+< Set-Cookie: PLAY_SESSION=; Expires=Thu, 03 Jul 2014 10:20:50 GMT; Path=/
+< Cache-Control: no-cache
+< Content-Length: 8633
+<
+<!DOCTYPE html>
+<html>
+        <head>
+                <title>Fortunes</title>
+        </head>
+        <body>
+                <table>
+                        <tr>
+                                <th>id</th>
+                                <th>message</th>
+                        </tr>
+                                <tr>
+                                        <td>13</td>
+                                        <td>009D30980AA408F62A12E0E7E7ACBD17</td>
+                                </tr>
+                                <tr>
+                                        <td>11</td>
+                                        <td>01E9ED065629C13CDD69B6115EBE39E9</td>
+                                </tr>
+                                <tr>
+                                        <td>84</td>
+                                        <td>01E9ED065629C13CDD69B6115EBE39E9</td>
+                                </tr>
+                                <tr>
+                                        <td>93</td>
+                                        <td>01E9ED065629C13CDD69B6115EBE39E9</td>
+                                </tr>
+                                <tr>
+                                        <td>95</td>
+                                        <td>01E9ED065629C13CDD69B6115EBE39E9</td>
+                                </tr>
+                                <tr>
+                                        <td>50</td>
+                                        <td>0764924EE9C3CFF6D74CD34F5D986D6B</td>
+                                </tr>
+                                <tr>
+                                        <td>5</td>
+                                        <td>08C3734568F63EF539C33E4474D6C085</td>
+                                </tr>
+                                <tr>
+                                        <td>27</td>
+                                        <td>08C3734568F63EF539C33E4474D6C085</td>
+                                </tr>
+                                <tr>
+                                        <td>98</td>
+                                        <td>08C3734568F63EF539C33E4474D6C085</td>
+                                </tr>
+								...
 ```
-json
+
+/updates?queries=10
+-------------------
 ```
+< HTTP/1.1 200 OK
+< Server: Play! Framework;1.3.x-1.3.0RC1;dev
+< Content-Type: application/json; charset=utf-8
+< Date: Thu, 03 Jul 2014 10:24:16 GMT
+< Set-Cookie: PLAY_FLASH=; Expires=Thu, 03 Jul 2014 10:24:16 GMT; Path=/
+< Set-Cookie: PLAY_ERRORS=; Expires=Thu, 03 Jul 2014 10:24:16 GMT; Path=/
+< Set-Cookie: PLAY_SESSION=; Expires=Thu, 03 Jul 2014 10:24:16 GMT; Path=/
+< Cache-Control: no-cache
+< Content-Length: 319
+<
+[{"id":7171,"randomNumber":351},{"id":6019,"randomNumber":9725},
+{"id":8118,"randomNumber":4023},{"id":7965,"randomNumber":1388},
+{"id":7797,"randomNumber":2249},{"id":112,"randomNumber":1108},{"id":6127,"randomNumber":4323},
+{"id":2597,"randomNumber":7509},{"id":2978,"randomNumber":7883},{"id":1111,"randomNumber":2228}]
+
 ```
-json
+/plaintext
+----------
 ```
+< HTTP/1.1 200 OK
+< Server: Play! Framework;1.3.x-1.3.0RC1;dev
+< Content-Type: text/plain; charset=utf-8
+< Date: Thu, 03 Jul 2014 10:25:25 GMT
+< Set-Cookie: PLAY_FLASH=; Expires=Thu, 03 Jul 2014 10:25:25 GMT; Path=/
+< Set-Cookie: PLAY_ERRORS=; Expires=Thu, 03 Jul 2014 10:25:25 GMT; Path=/
+< Set-Cookie: PLAY_SESSION=; Expires=Thu, 03 Jul 2014 10:25:25 GMT; Path=/
+< Cache-Control: no-cache
+< Content-Length: 11
+<
+hello world
 ```

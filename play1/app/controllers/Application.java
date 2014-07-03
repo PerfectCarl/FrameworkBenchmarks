@@ -56,7 +56,7 @@ public class Application extends Controller {
         renderJSON(worlds);
     }
 
-    public static void update(int queries) {
+    public static void updates(int queries) {
         // Bounds check.
         if (queries > 500) {
             queries = 500;
