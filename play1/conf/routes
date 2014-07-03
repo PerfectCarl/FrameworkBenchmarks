@@ -2,13 +2,20 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-
-# Home page
-GET     /json                           Application.json
-GET     /db                             Application.dbSync
-GET     /db2                            Application.dbAsyncAllQueries
-GET     /db3                            Application.dbAsyncEachQuery
-GET     /setup                          Application.setup
+# Documentation
 GET     /                               Application.index
-GET     /hello                          Application.hello
+
+# Round 8
+GET     /json                           Application.json
+GET     /db                             Application.db
+GET     /update                         Application.update  
+GET     /fortunes                       Application.fortunes  
+GET     /plaintext						Application.plaintext
+GET     /queries						Application.queries
+
+# Extra
+GET     /setup                          Extra.setup
+GET     /setup_tx                       Extra.setupTx
+GET     /staticplaintext				staticFile:/public/html/plaintext.html
+GET     /dbAsync						Extra.dbAsyncEachQuery
 

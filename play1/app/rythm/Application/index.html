@@ -1,8 +1,15 @@
 @extends(main, title:"Index")
 
 <ul>
-<li><a href="@{Application.db(queries:100)}">DB</a></li>
-<li><a href="@{Application.dbSync(queries:100)}">DB sync</a></li>
-<li><a href="@{Application.json}">JSON test</a></li>
-<li><a href="@{Application.setup}">populate db</a></li>
+	<li><a href="@url(Application.db)">DB</a></li>
+	<li><a href="@url(Application.json)">Json</a></li>
+	<li><a href="@url(Application.setup)">Setup</a></li>
+	<li><a href="@url(Application.plaintext)">plaintext</a></li>
+	<li><a href="/staticplaintext">staticplaintext</a></li>
+
+	<li><a href="@url(Application.fortunes)">fortunes</a></li>
+	<li><a href="@url(Application.update)">update</a></li>
+
+	<li><a href="@url(Application.setup)">populate db</a></li>
+	<li><a href="@url(Application.setupTx)">populate db tx</a></li>
 </ul>
